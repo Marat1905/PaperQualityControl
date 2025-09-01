@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace PaperQualityControl.Models
 {
-    internal class TrainingImage
+    public record TrainingImage
     {
+        public required string ImagePath { get; init; }
+        public required string Category { get; init; }
+        public required SensorData SensorData { get; init; }
+        public required DateTime Timestamp { get; init; }
     }
 }

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PaperQualityControl.Models
+﻿namespace PaperQualityControl.Models
 {
-    internal class Defect
+    public record Defect
     {
+        public required string Type { get; init; }
+        public required float Confidence { get; init; }
+        public required Rectangle Location { get; init; }
+        public required DateTime Timestamp { get; init; }
+        public string? ImagePath { get; init; }
     }
 }
